@@ -1,14 +1,15 @@
 ### Code Book
 The run_analyis.R script produces two tables from the raw UCI HAR Dataset, the full_data table and the summarised table, as described in the README file.
 
-These tables contain tidied data from the UCI HAR experiments. Below is a quote from the README.txt file in raw data describing the experiments.
+These tables contain tidied data from the UCI HAR experiments. Below is a quote from the README.txt file in the raw data which describes the experiments.
 >The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 
 >
 >The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain.
 
+##### full_data Table
 The full_data table has 10299 rows, each containing one sample, a subjects column, which contains a the number of human subject from which the sample was taken, an activities column, which contains the activity the subject was performing when the sample was taken, and 66 columns containing the the sample values for each of the selected variables. These 10299 samples are the combination of the training and test data provided in the raw data, as required by the project description.
 
-The variables in this table produced from the a set of measured features. Below is a quote from the features.txt file in the raw data describing the features.
+The variables in this table are produced from the set of measured features included in the raw data. Below is a quote from the features.txt file in the raw data describing the features.
 >The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
 >
 >Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
@@ -116,5 +117,19 @@ And the Fast Fourier Transform (FFT) versions of the above varaibles
  
 All these variables are normalised between [-1, 1], and has no associated units.
 
-###summarised Table
-The 'summarised' table produced by run_analysis.R contains mean values of all the variables for each combiation of all activities and subjects. These are produced by melting the full data with the reshape2 package over subjects and activities, and then using the dcast function with subjects and activities vs variable.
+#####summarised Table
+The 'summarised' table produced by run_analysis.R contains mean values of all the variables for each combiation of all activities and subjects. These are produced by melting the full data with the reshape2 package over subjects and activities, and then using the dcast function with subjects and activities vs variable. This table consists of 180 rows, each containing one combination of the 6 activities and 30 subjects, a subjects column, which contains a the number of human subject from which the sample was taken, an activities column, which contains the activity the subject was performing when the sample was taken, and 66 columns containing the the sample values for each of the selected variables.
+
+#####Licence
+Quoted from the licence in the raw data README.txt file
+License:
+>========
+>Use of this dataset in publications must be acknowledged by referencing the following publication [1] 
+>
+>[1] Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
+>
+>This dataset is distributed AS-IS and no responsibility implied or explicit can be addressed to the authors or their institutions for its use or misuse. Any commercial use is prohibited.
+>
+>Jorge L. Reyes-Ortiz, Alessandro Ghio, Luca Oneto, Davide Anguita. November 2012.
+
+Tidy data set produced by Alistair McKelvie

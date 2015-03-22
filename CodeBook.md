@@ -21,106 +21,97 @@ The variables in this table produced from the a set of measured features. Below 
 The raw data includes 16 variables derived from the raw feature data, this tidied data, however, only contains the mean and standard deviation of the of the feature data, as required by the project description. Some additional variables were included in the raw data which were produce by "averaging the signals in a signal window sample", these are named as means, I interpret them as effectively being additional features, and not the means the project asks for.
 
 The variables in this tidy data are:
-The mean and std deviation of Body Acceleration in the X, Y and Z directions:
-tBodyAcc.mean.X
-tBodyAcc.mean.Y
-tBodyAcc.mean.Z
-tBodyAcc.std.X
-tBodyAcc.std.Y
-tBodyAcc.std.Z
-
-The mean and std deviation of Body Acceleration Jerk the X, Y and Z directions:
-tBodyAccJerk.mean.X
-tBodyAccJerk.mean.Y
-tBodyAccJerk.mean.Z
-tBodyAccJerk.std.X
-tBodyAccJerk.std.Y
-tBodyAccJerk.std.Z
-
-The mean and std deviation of Gravity Acceleration in the X, Y and Z directions:
-tGravityAcc.mean.X
-tGravityAcc.mean.Y
-tGravityAcc.mean.Z
-tGravityAcc.std.X
-tGravityAcc.std.Y
-tGravityAcc.std.Z
-
-The mean and std deviation of Body Gyro in the X, Y and Z directions:
-tBodyGyro.mean.X
-tBodyGyro.mean.Y
-tBodyGyro.mean.Z
-tBodyGyro.std.X
-tBodyGyro.std.Y
-tBodyGyro.std.Z
-
-The mean and std deviation of Body Gyro Jerk in the X, Y and Z directions:
-tBodyGyroJerk.mean.X
-tBodyGyroJerk.mean.Z
-tBodyGyroJerk.std.Y
-tBodyGyroJerk.mean.Y
-tBodyGyroJerk.std.X
-tBodyGyroJerk.std.Z
-
-The mean and std deviation of Body Acceleration Magnitude:
-tBodyAccMag.mean
-tBodyAccMag.std
-
-The mean and std deviation of Body Acceleration Jerk Magnitude:
-tBodyAccJerkMag.mean
-tBodyAccJerkMag.std
-
-The mean and std deviation of Gravity Acceleration Magnitude:
-tGravityAccMag.mean
-tGravityAccMag.std
-
-The mean and std deviation of Body Gyro Magnitude:
-tBodyGyroMag.mean
-tBodyGyroMag.std
-
-The mean and std deviation of Body Gyro Jerk Magnitude:
-tBodyGyroJerkMag.mean
-tBodyGyroJerkMag.std
+* The mean and std deviation of Body Acceleration in the X, Y and Z directions:
+ * tBodyAcc.mean.X
+ * tBodyAcc.mean.Y
+ * tBodyAcc.mean.Z
+ * tBodyAcc.std.X
+ * tBodyAcc.std.Y
+ * tBodyAcc.std.Z
+* The mean and std deviation of Body Acceleration Jerk the X, Y and Z directions:
+ * tBodyAccJerk.mean.X
+ * tBodyAccJerk.mean.Y
+ * tBodyAccJerk.mean.Z
+ * tBodyAccJerk.std.X
+ * tBodyAccJerk.std.Y
+ * tBodyAccJerk.std.Z
+* The mean and std deviation of Gravity Acceleration in the X, Y and Z directions:
+ * tGravityAcc.mean.X
+ * tGravityAcc.mean.Y
+ * tGravityAcc.mean.Z
+ * tGravityAcc.std.X
+ * tGravityAcc.std.Y
+ * tGravityAcc.std.Z
+* The mean and std deviation of Body Gyro in the X, Y and Z directions:
+ * tBodyGyro.mean.X
+ * tBodyGyro.mean.Y
+ * tBodyGyro.mean.Z
+ * tBodyGyro.std.X
+ * tBodyGyro.std.Y
+ * tBodyGyro.std.Z
+* The mean and std deviation of Body Gyro Jerk in the X, Y and Z directions:
+ * tBodyGyroJerk.mean.X
+ * tBodyGyroJerk.mean.Z
+ * tBodyGyroJerk.std.Y
+ * tBodyGyroJerk.mean.Y
+ * tBodyGyroJerk.std.X
+ * tBodyGyroJerk.std.Z
+* The mean and std deviation of Body Acceleration Magnitude:
+ * tBodyAccMag.mean
+ * tBodyAccMag.std
+* The mean and std deviation of Body Acceleration Jerk Magnitude:
+ * tBodyAccJerkMag.mean
+ * tBodyAccJerkMag.std
+* The mean and std deviation of Gravity Acceleration Magnitude:
+ * tGravityAccMag.mean
+ * tGravityAccMag.std
+* The mean and std deviation of Body Gyro Magnitude:
+ * tBodyGyroMag.mean
+ * tBodyGyroMag.std
+* The mean and std deviation of Body Gyro Jerk Magnitude:
+ * tBodyGyroJerkMag.mean
+ * tBodyGyroJerkMag.std
 
 And the Fast Fourier Transform (FFT) versions of the above varaibles
-fBodyAcc.mean.X
-fBodyAcc.mean.Y
-fBodyAcc.mean.Z
-fBodyAcc.std.X
-fBodyAcc.std.Y
-fBodyAcc.std.Z
-fBodyAccJerk.mean.X
-fBodyAccJerk.mean.Y
-fBodyAccJerk.mean.Z
-fBodyAccJerk.std.X
-fBodyAccJerk.std.Y
-fBodyAccJerk.std.Z
-fGravityAcc.mean.X
-fGravityAcc.mean.Y
-fGravityAcc.mean.Z
-fGravityAcc.std.X
-fGravityAcc.std.Y
-fGravityAcc.std.Z
-fBodyGyro.mean.X
-fBodyGyro.mean.Y
-fBodyGyro.mean.Z
-fBodyGyro.std.X
-fBodyGyro.std.Y
-fBodyGyro.std.Z
-fBodyGyroJerk.mean.X
-fBodyGyroJerk.mean.Z
-fBodyGyroJerk.std.Y
-fBodyGyroJerk.mean.Y
-fBodyGyroJerk.std.X
-fBodyGyroJerk.std.Z
-fBodyAccMag.mean
-fBodyAccMag.std
-fBodyAccJerkMag.mean
-fBodyAccJerkMag.std
-fGravityAccMag.mean
-fGravityAccMag.std
-fBodyGyroMag.mean
-fBodyGyroMag.std
-fBodyGyroJerkMag.mean
-fBodyGyroJerkMag.std
-
+ * fBodyAcc.mean.X
+ * fBodyAcc.mean.Y
+ * fBodyAcc.mean.Z
+ * fBodyAcc.std.X
+ * fBodyAcc.std.Y
+ * fBodyAcc.std.Z
+ * fBodyAccJerk.mean.X
+ * fBodyAccJerk.mean.Y
+ * fBodyAccJerk.mean.Z
+ * fBodyAccJerk.std.X
+ * fBodyAccJerk.std.Y
+ * fBodyAccJerk.std.Z
+ * fGravityAcc.mean.X
+ * fGravityAcc.mean.Y
+ * fGravityAcc.mean.Z
+ * fGravityAcc.std.X
+ * fGravityAcc.std.Y
+ * fGravityAcc.std.Z
+ * fBodyGyro.mean.X
+ * fBodyGyro.mean.Y
+ * fBodyGyro.mean.Z
+ * fBodyGyro.std.X
+ * fBodyGyro.std.Y
+ * fBodyGyro.std.Z
+ * fBodyGyroJerk.mean.X
+ * fBodyGyroJerk.mean.Z
+ * fBodyGyroJerk.std.Y
+ * fBodyGyroJerk.mean.Y
+ * fBodyGyroJerk.std.X
+ * fBodyGyroJerk.std.Z
+ * fBodyAccMag.mean
+ * fBodyAccMag.std
+ * fBodyAccJerkMag.mean
+ * fBodyAccJerkMag.std
+ * fGravityAccMag.mean
+ * fGravityAccMag.std
+ * fBodyGyroMag.mean
+ * fBodyGyroMag.std
+ * fBodyGyroJerkMag.mean
+ * fBodyGyroJerkMag.std
+ 
 

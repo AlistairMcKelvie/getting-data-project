@@ -130,4 +130,4 @@ Quoted from the licence in the raw data README.txt file:
 >
 >Jorge L. Reyes-Ortiz, Alessandro Ghio, Luca Oneto, Davide Anguita. November 2012.
 
-Tidy data set produced by Alistair McKelvie
+Tidy data set produced by Alistair McKelvie.

@@ -27,7 +27,7 @@ y_test <- data.table(read.table("./UCI HAR Dataset/test/y_test.txt"))
 y_full <- list(y_train, y_test)
 y_full <- rbindlist(y_full)
 
-# Convert y data to activity names
+## Convert y data to activity names
 library(plyr)
 activities <- as.character(y_full[,V1])
 activities <- revalue(activities, c("1"="WALKING", "2"="WALKING_UPSTAIRS",
@@ -44,5 +44,6 @@ subjects <- rbindlist(subjects)[,V1]
 full_data <- cbind(subjects, activities, x_full)
 
 ## Make summary table
+library(reshape2)
 melted <- melt(full_data, c("subjects", "activities"))
-summarised <- dcast(subjects + activities ~ variable, data=m, mean)
+summarised <- dcast(subjects + activities ~ variable, data=melted, mean)

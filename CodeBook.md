@@ -114,4 +114,7 @@ And the Fast Fourier Transform (FFT) versions of the above varaibles
  * fBodyGyroJerkMag.mean
  * fBodyGyroJerkMag.std
  
+All these variables are normalised between [-1, 1], and has no associated units.
 
+###summarised Table
+The 'summarised' table produced by run_analysis.R contains mean values of all the variables for each combiation of all activities and subjects. These are produced by melting the full data with the reshape2 package over subjects and activities, and then using the dcast function with subjects and activities vs variable.

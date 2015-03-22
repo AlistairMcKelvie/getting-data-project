@@ -6,7 +6,7 @@ These tables contain tidied data from the UCI HAR experiments. Below is a quote 
 >
 >The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain.
 
-##### full_data Table
+##### 'full_data' Table
 The full_data table has 10299 rows, each containing one sample, a subjects column, which contains a the number of human subject from which the sample was taken, an activities column, which contains the activity the subject was performing when the sample was taken, and 66 columns containing the the sample values for each of the selected variables. These 10299 samples are the combination of the training and test data provided in the raw data, as required by the project description.
 
 The variables in this table are produced from the set of measured features included in the raw data. Below is a quote from the features.txt file in the raw data describing the features.
@@ -29,7 +29,7 @@ The variables in this tidy data are:
  * tBodyAcc.std.X
  * tBodyAcc.std.Y
  * tBodyAcc.std.Z
-* The mean and std deviation of Body Acceleration Jerk the X, Y and Z directions:
+* The mean and std deviation of Body Acceleration Jerk in the X, Y and Z directions:
  * tBodyAccJerk.mean.X
  * tBodyAccJerk.mean.Y
  * tBodyAccJerk.mean.Z
@@ -115,15 +115,13 @@ And the Fast Fourier Transform (FFT) versions of the above varaibles
  * fBodyGyroJerkMag.mean
  * fBodyGyroJerkMag.std
  
-All these variables are normalised between [-1, 1], and has no associated units.
+All these variables are normalised between [-1, 1], and have no associated units.
 
-#####summarised Table
-The 'summarised' table produced by run_analysis.R contains mean values of all the variables for each combiation of all activities and subjects. These are produced by melting the full data with the reshape2 package over subjects and activities, and then using the dcast function with subjects and activities vs variable. This table consists of 180 rows, each containing one combination of the 6 activities and 30 subjects, a subjects column, which contains a the number of human subject from which the sample was taken, an activities column, which contains the activity the subject was performing when the sample was taken, and 66 columns containing the the sample values for each of the selected variables.
+#####'summarised' Table
+The 'summarised' table produced by run_analysis.R contains mean values of all the variables for each combiation of all activities and subjects. These are produced by melting the full data with the reshape2 package over subjects and activities, and then using the dcast function on subjects and activities vs variable. This table consists of 180 rows, each containing one combination of the 6 activities and 30 subjects, a subjects column, which contains a the number of human subject from which the sample was taken, an activities column, which contains the activity the subject was performing when the sample was taken, and 66 columns containing the the sample values for each of the selected variables.
 
 #####Licence
-Quoted from the licence in the raw data README.txt file
-License:
->========
+Quoted from the licence in the raw data README.txt file:
 >Use of this dataset in publications must be acknowledged by referencing the following publication [1] 
 >
 >[1] Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
